@@ -11,13 +11,6 @@ export const metadata: Metadata = {
 
 export default async function Blog() {
   const posts: Posts = await getPosts();
-  // console.log(posts);
-  // const rawContent = posts.content.raw;
-  // console.log(rawContent);
-  // posts.forEach((post) => {
-  //   const rawContent = post.content.raw;
-  //   console.log(rawContent);
-  // });
   return (
     <>
       <Breadcrumb

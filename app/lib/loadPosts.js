@@ -85,9 +85,7 @@ export default async function getPostDetails(slug) {
       },
     }),
   });
-  // console.log(response);
-  // console.log(response.errors);
+
   const data = await response.json();
-  // console.log(data.data.blog;
   return data.data.post;
 }

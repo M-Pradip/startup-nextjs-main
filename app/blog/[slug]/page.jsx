@@ -3,14 +3,12 @@ import RelatedPost from "@/components/Blog/RelatedPost";
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import NewsLatterBox from "@/components/Contact/NewsLatterBox";
-
 import moment from "moment";
 import Image from "next/image";
 import React from "react";
 
 export default async function BlogSidebarPage({ params }) {
   const postsData = await getPostDetails(params.slug);
-  console.log(postsData);
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
 
