@@ -7,7 +7,7 @@ import moment from "moment";
 import Image from "next/image";
 import React from "react";
 
-export default async function BlogSidebarPage({ params }) {
+async function BlogSidebarPage({ params }) {
   const postsData = await getPostDetails(params.slug);
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
@@ -501,3 +501,4 @@ export default async function BlogSidebarPage({ params }) {
     </>
   );
 }
+export default BlogSidebarPage;

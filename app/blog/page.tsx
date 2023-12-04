@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "This is Blog Page for 1300tech",
 };
 
-export default async function Blog() {
+async function Blog() {
   const posts: Posts = await getPosts();
   return (
     <>
@@ -97,3 +97,4 @@ export default async function Blog() {
     </>
   );
 }
+export default Blog;
