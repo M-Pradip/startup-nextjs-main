@@ -5,7 +5,6 @@ import SingleBlog from "./SingleBlog";
 
 export default async function Blog() {
   const posts: Posts = await getPosts();
-  // console.log(posts);
 
   return (
     <section
