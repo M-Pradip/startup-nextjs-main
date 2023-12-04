@@ -1,10 +1,9 @@
 import { GraphQLClient } from "graphql-request";
 
-const graphqlAPI = process.env.GRAPHCMS_ENDPOINT;
+const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
+const hygraph = new GraphQLClient(graphqlAPI);
 export const getPosts = async () => {
-  const hygraph = new GraphQLClient(graphqlAPI);
-
   try {
     const response = await hygraph.request(`query MyQuery {
       postsConnection {
@@ -46,7 +45,7 @@ export const getPosts = async () => {
 };
 
 export default async function getPostDetails(slug) {
-  const response = await fetch(process.env.GRAPHCMS_ENDPOINT, {
+  const response = await fetch(process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
